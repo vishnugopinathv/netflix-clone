@@ -16,8 +16,6 @@ function App() {
       <Contentrow title="Documentary" genreid={99}/>
       <Contentrow title="Drama" genreid={18}/>
       <Contentrow title="History" genreid={36}/>
-      
-
     </div>
   );
 }

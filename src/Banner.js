@@ -6,7 +6,7 @@ function Banner() {
   useEffect(() => {
     async function getMovieTitle(){
       const response=await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=348c596e3d81ab66611de39d54e48806`)
-      const random=parseInt(Math.random()*10);
+      const random=parseInt(Math.random()*18);
       const valid=response.data.results.filter(v=> v.hasOwnProperty('title') ? v : "")
       setMovie(valid[random]);
       // console.log(valid);
