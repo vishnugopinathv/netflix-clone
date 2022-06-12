@@ -36,7 +36,7 @@ header{
 }
 .banner{
   background-size:cover;
-  height: 560px;
+  height: 37vw;
   color: white;
   position: relative;
   line-height: 1.6;
@@ -83,7 +83,7 @@ header{
   color: black;
 }
 .content__row{
-  margin:0 2rem 3rem;
+  margin:0 3rem 3rem;
 }
 .content{
   display: flex;
@@ -103,7 +103,7 @@ header{
 .content__row h1{
   color: white;
   font-family: 'Roboto',sans-serif;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 .description{
   width: 40%;
