@@ -38,7 +38,7 @@ function Banner({show,obj,title}) {
     }
   }
   return(
-    movie ? <section className='banner' style={{backgroundImage: `url(${imageUrl+movie.backdrop_path})`}}>
+    movie ? <section className='banner' style={{backgroundImage: `url(${imageUrl+"original/"+movie.backdrop_path})`}}>
     <div className="banner__container">
         <h1 className='title'>{movie.title? movie.title: movie.name}</h1>
         <div className="banner__buttons">

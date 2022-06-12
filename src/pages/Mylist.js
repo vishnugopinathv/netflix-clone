@@ -13,7 +13,7 @@ const Mylist = () => {
             return(
               <Link to={`/${v.id}`} key={v.id} state={{obj:v}}>
                       <div className="card__wrapper"  >
-                        <img src={imageUrl+v.poster_path} alt="" />
+                        <img src={imageUrl+"/w500"+v.poster_path} alt="" />
                       </div>
                     </Link>
             )

@@ -28,7 +28,7 @@ function Contentrow(props) {
             return(
                     <Link to={`/${v.id}`} key={v.item_id} state={{obj:v,id:genreid,lang:lang,show:show}}>
                       <div className="card__wrapper"  >
-                        <img src={imageUrl+v.poster_path} alt="" />
+                        <img src={imageUrl+"w500"+v.poster_path} alt="" />
                       </div>
                     </Link>
             )
