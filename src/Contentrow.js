@@ -2,21 +2,23 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { v1 as uuidv1} from "uuid";
 import {API_KEY,tmdbUrl,imageUrl} from './constants/constant'
+import { Link } from 'react-router-dom';
 function Contentrow(props) {
-  const{title,genreid}=props
-  const [content, setContent] = useState([]);
+  const{title,genreid,show,lang}=props
+  const[content,setContent]=useState([])
    useEffect(() => {
+    console.log(show)
     async function getContent(){
-      const response=await axios.get(`${tmdbUrl}discover/movie?with_genres=${genreid}&api_key=${API_KEY}`);
+      const response=await axios.get(`${tmdbUrl}discover/${show}?with_genres=${genreid}&api_key=${API_KEY}&with_original_language=${lang}`);
       setContent(response.data.results.map(v=>{
         return(
           {...v,item_id:uuidv1()}
         )
       }));
+      console.log(response);
     }
     getContent();
-   }, [genreid])
-   
+   }, [genreid,lang,show])
   return (
     <section className='content__row'>
         <h1>{title}</h1>
@@ -24,16 +26,11 @@ function Contentrow(props) {
         {
           content ? content.map(v=>{
             return(
-                  <div className="card__wrapper"  key={v.item_id}>
-                    <img src={imageUrl+v.poster_path} alt="" />
-                    <div className="hover__content">
-                      <h2>{v.title}</h2>
-                      <div className="hover__content__btn">
-                        <button><i className="fa-solid fa-play"></i>Watch</button>
-                        <button><i className="fa-solid fa-plus"></i>My List</button>
+                    <Link to={`/${v.id}`} key={v.item_id} state={{obj:v,id:genreid,lang:lang,show:show}}>
+                      <div className="card__wrapper"  >
+                        <img src={imageUrl+v.poster_path} alt="" />
                       </div>
-                      </div>
-                  </div>
+                    </Link>
             )
           }):""
         }
