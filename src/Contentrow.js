@@ -3,8 +3,10 @@ import axios from 'axios'
 import { v1 as uuidv1} from "uuid";
 import {API_KEY,tmdbUrl,imageUrl} from './constants/constant'
 import { Link } from 'react-router-dom';
+import { useContextConsumer } from './context/contentContext';
 function Contentrow(props) {
-  const{title,genreid,show,lang}=props
+  const{title,genreid,show,lang,mylist}=props
+  const{myList}=useContextConsumer();
   const[content,setContent]=useState([])
    useEffect(() => {
     console.log(show)
@@ -24,7 +26,7 @@ function Contentrow(props) {
         <h1>{title}</h1>
         <div className="content">
         {
-          content ? content.map(v=>{
+          mylist ? myList.map(v=>{
             return(
                     <Link to={`/${v.id}`} key={v.item_id} state={{obj:v,id:genreid,lang:lang,show:show}}>
                       <div className="card__wrapper"  >
@@ -32,7 +34,15 @@ function Contentrow(props) {
                       </div>
                     </Link>
             )
-          }):""
+          }):content.map(v=>{
+            return(
+                    <Link to={`/${v.id}`} key={v.item_id} state={{obj:v,id:genreid,lang:lang,show:show}}>
+                      <div className="card__wrapper"  >
+                        <img src={imageUrl+"w500"+v.poster_path} alt="" />
+                      </div>
+                    </Link>
+            )
+          })
         }
         </div>
     </section>

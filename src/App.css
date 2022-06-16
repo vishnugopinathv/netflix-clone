@@ -32,6 +32,8 @@ header{
   position: sticky;
   top: 0;
   z-index: 10;
+  /* display: flex;
+  justify-content: center; */
 
 }
 .banner{
@@ -126,12 +128,13 @@ header{
   text-decoration: none;
   color: white;
   font-family: 'Montserrat',sans-serif;
-  padding-right: 2rem;
 }
 .navlinks{
-  position: absolute;
-  top: 1.75rem;
-  left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 100%;
 }
 .mylist__container{
   padding: 1rem  3rem;
@@ -147,4 +150,26 @@ header{
 }
 .list__container .card__wrapper{
   margin-top: 2rem;
+}
+.browse__head{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.browse__head h1{
+  color: white;
+}
+.browse__head select{
+  width: 10rem;
+  padding:0.5rem 1rem;
+  margin-right: 1rem;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  font-family: 'Montserrat',sans-serif;
+  font-family: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 2px solid white;
 }
