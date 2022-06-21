@@ -41,11 +41,11 @@ function Banner({show,obj,title}) {
     movie ? <section className='banner' style={{backgroundImage: `url(${imageUrl+"original/"+movie.backdrop_path})`}}>
     <div className="banner__container">
         <h1 className='title'>{movie.title? movie.title: movie.name}</h1>
+        <p className='description'>{movie.overview}</p>
         <div className="banner__buttons">
             <button className='banner__btn'><i className="fa-solid fa-play"></i> play</button>
             <button className='banner__btn' onClick={addMyList}><i className={`fa-solid ${includes ? 'fa-check' :'fa-plus'}`}></i> My List</button>
         </div>
-        <p className='description'>{movie.overview}</p>
     </div>
     <div className="grey__shade"></div>
 </section>  : null

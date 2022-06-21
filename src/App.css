@@ -47,10 +47,13 @@ header{
 .banner__container{
   background-color: rgb(0, 0, 0,0.5);
   height: 100%;
-  padding:2rem 4rem;
+  padding:2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .banner__container>h1{
-  font-size: 4rem;
+  font-size: 4vw;
   padding-top: 2rem;
   width: 50%;
   font-family: 'Montserrat',sans-serif;
@@ -58,19 +61,15 @@ header{
 }
 .grey__shade{
   background: linear-gradient(180deg,transparent,rgb(28, 28, 28,0.5),rgb(9, 9, 9));
-  height: 10rem;
+  height: 5rem;
   position: absolute;
  bottom: 0rem;
   width: 100%;
 }
-.banner__buttons{
-  margin:2rem 0;
-  
-}
 .banner__btn{
   background:transparent;
   border: 1px solid white;
-  margin: 0 1rem;
+  margin-right: 1rem;
   padding: 0.5rem 1rem;
   color: white;
   border-radius: 5px;
@@ -79,6 +78,7 @@ header{
   font-family: 'Poppins',sans-serif;
   width: 7rem;
   letter-spacing: 1px;
+  transition: 0.4s ease-in-out;
 }
 .banner__btn:hover{
   background-color:white;
@@ -108,10 +108,12 @@ header{
   margin: 1.5rem 0;
 }
 .description{
-  width: 40%;
-  font-family: 'Poppins',sans-serif;
+  width: 35%;
+  font-family: 'Montserrat',sans-serif;
   overflow-y: scroll;
-  height:12rem;
+  font-size: 1vw;
+  height: 5rem;
+  overflow: scroll;
 }
 .description::-webkit-scrollbar{
   display: none;
