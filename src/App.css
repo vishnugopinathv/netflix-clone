@@ -20,6 +20,13 @@ body::-webkit-scrollbar{
   top: 1.5rem;
   width: 7rem;
 }
+.logo1{
+  display: none;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: 3.5rem;
+}
 .avatar{
   position: fixed;
   right: 1.5rem;
@@ -32,9 +39,6 @@ header{
   position: sticky;
   top: 0;
   z-index: 10;
-  /* display: flex;
-  justify-content: center; */
-
 }
 .banner{
   background-size:cover;
@@ -140,11 +144,20 @@ header{
 }
 .mylist__container{
   padding: 1rem  3rem;
+  width: 95%;
+  margin: auto;
+
+}
+.browse__container{
+  padding: 1rem 3rem;
+}
+.browse__container .list__container{
+  justify-content: space-around;
 }
 .list__container{
   display:flex;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 .list__container img{
@@ -174,4 +187,139 @@ header{
   cursor: pointer;
   border-radius: 0.25rem;
   border: 2px solid white;
+}
+.header__dropdown{
+  position: fixed;
+  top: 2rem;
+  left: 6rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding:0 1rem;
+  font-family: 'Montserrat',sans-serif;
+  background: rgb(13, 13, 13);
+  display: none;
+  outline: none;
+}
+@media (max-width:965px){
+    .description{
+      font-size: 1.5vw;
+      height: 3rem;
+    }
+    .banner{
+      height: 50vw;
+    }
+    .content__row img,.card__wrapper{
+      width: 9rem;
+      height: 13rem;
+    }
+   .content__row h1{
+    font-size: 1.25rem;
+   }
+   .banner__btn{
+    font-size: 0.65rem;
+    width: 5.5rem;
+    padding: 0.5rem;
+   }
+   .list__container img{
+    width: 9.5rem;
+   }
+   .mylist__container{
+    padding: 1rem;
+   }
+   .navlinks{
+    gap: 1.5rem;
+   }
+   .logo{
+      left: 1.5rem;
+   }
+}
+@media (max-width:695px){
+  .logo{
+    display: none;
+  }
+  .logo1{
+    display: inline;
+  }
+  .avatar{
+    width: 2rem;
+    top: 1.5rem;
+  }
+  .banner{
+    height: 55vw;
+  }
+  .banner__container{
+    padding: 0.5rem 1.5rem;
+  }
+  .banner__container>h1{
+    font-size: 5vw;
+  }
+  .navlinks{
+    display: none;
+  }
+  .header__dropdown{
+    display: inline;
+  }
+  .list__container{
+    justify-content: space-around;
+  }
+  .banner__btn{
+    font-size: 0.5rem;
+    width: 4.5rem;
+    padding:0.35rem 0.25rem;
+  }
+  .content__row h1{
+    font-size: 1rem;
+  }
+  .content__row{
+    margin: 1rem;
+  }
+  .browse__container{
+    padding: 1rem;
+  }
+}
+@media (max-width:495px){
+  .content__row h1{
+    font-size: 0.875rem;
+  }
+  .card__wrapper,.card__wrapper img{
+    width:7rem ;
+    height:10rem;
+  }
+  .description{
+    display: none;
+  }
+  .banner__container>h1{
+    font-size: 6vw;
+    width: 60%;
+  }
+  .grey__shade{
+    display: none;
+  }
+  header{
+    height:3.5rem;
+  }
+  .banner__container{
+    gap: 0.5rem;
+  }
+  .logo1{
+    width: 2.5rem;
+    top: 0.75rem;
+  }
+  .avatar{
+    width: 1.5rem;
+    top: 1rem;
+  }
+  .header__dropdown{
+    top: 1.25rem;
+    left: 3rem;
+    font-size: 0.75rem;
+  }
+  .content_row h1{
+    font-size: 0.75rem;
+  }
+  .banner__btn{
+    width: 3.5rem;
+    font-size: 0.35rem;
+  }
 }

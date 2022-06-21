@@ -38,6 +38,11 @@ const Browse = () => {
       <option value={80}>Crime</option>
       <option value={18}>Drama</option>
       <option value={10749}>Romance</option>
+      <option value={12}>Adventure</option>
+      <option value={35}>Comedy</option>
+      <option value={27}>Horror</option>
+      <option value={53}>Thriller</option>
+      <option value={28}>Action</option>
     </select>
     <select name="language" id="" value={option.language} onChange={changeHandler} >
     <option value="" disabled >language</option>
@@ -45,10 +50,14 @@ const Browse = () => {
       <option value="ja">Japanese</option>
       <option value="ko">Korean</option>
       <option value="hi">Hindi</option>
+      <option value="de">German</option>
+      <option value="es">Spanish</option>
+      <option value="ml">Malayalam</option>
+      <option value="ta">Tamil</option>
     </select>
     </div>
     </div>
-    <div className="mylist__container">
+    <div className="browse__container">
       <div className="list__container">
       {
       shows.map((v)=>{
