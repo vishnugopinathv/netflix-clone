@@ -54,7 +54,6 @@ header{
   padding:2rem 3.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 .banner__container>h1{
   font-size: 4vw;
@@ -83,6 +82,9 @@ header{
   width: 7rem;
   letter-spacing: 1px;
   transition: 0.4s ease-in-out;
+}
+.banner__buttons{
+  padding: 1.5rem 0;
 }
 .banner__btn:hover{
   background-color:white;
@@ -134,12 +136,12 @@ header{
   text-decoration: none;
   color: white;
   font-family: 'Montserrat',sans-serif;
+  padding-right: 4rem;
 }
 .navlinks{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
   height: 100%;
 }
 .mylist__container{
@@ -227,14 +229,14 @@ header{
    .mylist__container{
     padding: 1rem;
    }
-   .navlinks{
-    gap: 1.5rem;
+   .navlink{
+    padding-right: 1.5rem;
    }
    .logo{
       left: 1.5rem;
    }
 }
-@media (max-width:695px){
+@media (max-width:705px){
   .logo{
     display: none;
   }
@@ -299,8 +301,8 @@ header{
   header{
     height:3.5rem;
   }
-  .banner__container{
-    gap: 0.5rem;
+  .banner__buttons{
+    padding-right: 0.5rem;
   }
   .logo1{
     width: 2.5rem;
